@@ -1,0 +1,51 @@
+{
+  "testServer": "1128314694059425932",
+  "guilds": {
+    "testServer": "1388799644959506462",
+    "devserver": "1388799644959506462",
+    "logs": "1388799644959506462",
+    "mainserver": "1398338141605204081"
+  },
+  "clientId": "1396628276297994330",
+  "ownerId": "938925825355571251",
+  "devs": ["938925825355571251"],
+  "channels": {
+    "training": "1395205977220845588",
+    "pager": "1396629161707049101",
+    "geplande_inzet": "1396859620844245013",
+    "training_log": "1396629266309054555",
+    "devlog": "1400594671457271808",
+    "devcmdlog": "1389012496303521812",
+    "intake_log": "1398458434898235513",
+    "intake_status": "1398450911793254500",
+    "vc": {
+      "intake_wachtkamer": "1398450941933522954"
+    }
+  },
+  "roles": {
+    "intake": {
+      "leiding": "1398450322338222100",
+      "regular": "1398450377766207548",
+      "student": "1398450426524991670"
+    },
+    "whitelist": "1398338141605204085"
+  },
+  "colors": {
+    "mainColor": "#1a2867",
+    "porto": {
+      "green": "#18cf00",
+      "lightGreen": "#6bf759",
+      "darkGreen": "#0d5e03",
+      "red": "#f01000",
+      "darkRed": "#a80e03",
+      "orange": "#f06000",
+      "grey": "#adadad",
+      "darkGrey": "#757575",
+      "black": "#303030"
+    }
+  },
+  "messages": {
+    "mainError": "Something went wrong.",
+    "permsError": "You do not have enough permissions to execute this!"
+  }
+}
