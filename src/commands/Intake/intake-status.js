@@ -3,6 +3,9 @@ const {
   ApplicationCommandOptionType,
   PermissionFlagsBits,
   MessageFlags,
+  BitField,
+  PermissionsBitField,
+  PermissionOverwrites,
 } = require("discord.js");
 const jsonConfig = require("../../../config.json");
 module.exports = {
@@ -21,6 +24,7 @@ module.exports = {
           { name: "Open", value: "o", name_localizations: { nl: "Open" } },
           { name: "Closed", value: "c", name_localizations: { nl: "Dicht" } },
         ],
+        required: true,
       },
     ],
   },
@@ -57,9 +61,13 @@ module.exports = {
     switch (interaction.options.getString("status")) {
       case "o":
         wachtVC.userLimit = 8;
-        wachtVC.permissionOverwrites.edit(interaction.guild.id, {
-          JoinChannel: true,
-        });
+        wachtVC.permissionOverwrites.edit(
+          interaction.guild.id,
+          {
+            Connect: true,
+          }
+          // ! Werkt niet met vc.permissionOverwrites  `Intakes geopend door ${interaction.user.username}`
+        );
         if (msg) {
           await msg.edit({ content: "", embeds: [openE] });
         } else {
@@ -74,9 +82,13 @@ module.exports = {
 
       case "c":
         wachtVC.userLimit = null;
-        wachtVC.permissionOverwrites.edit(interaction.guild.id, {
-          JoinChannel: false,
-        });
+        wachtVC.permissionOverwrites.edit(
+          interaction.guild.id,
+          {
+            Connect: false,
+          }
+          // ! Werkt niet met vc.permissionOverwrites `Intakes gesloten door ${interaction.user.username}`
+        );
         if (msg) {
           await msg.edit({ content: "", embeds: [closedE] });
         } else {
