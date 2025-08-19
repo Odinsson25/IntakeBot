@@ -55,7 +55,7 @@ module.exports = {
     const closedE = new EmbedBuilder()
       .setTitle("Intakes gesloten")
       .setDescription(
-        "De intakes zijn gesloten! In dit kanaal krijg je een bericht wanneer de intakes weer open zijn."
+        "De intakes zijn gesloten! In dit kanaal krijg je een bericht wanneer de intakes weer open zijn.\n\nVoor je begint aan jouw intake, zorg ervoor dat je:\n* Voldoet aan de voorwaarden\n* De regels hebt doorgenomen\n* Intake doet op de microfoon die je in game gaat gebruiken\n* 10-20 minuten tijd hebt"
       );
 
     switch (interaction.options.getString("status")) {
